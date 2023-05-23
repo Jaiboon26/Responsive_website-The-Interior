@@ -1,0 +1,320 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: rgb(24, 23, 25);
+    z-index: 0;
+}
+
+.logo {
+    border: 1px solid white;
+    padding: 10px;
+    color: white;
+    float: left;
+    margin-top: 30px;
+    margin-left: 40px;
+    width: 120px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.menu {
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+.right {
+    width: 100%;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.right li {
+    padding: 25px;
+    float: right;
+    color: white;
+    display: inline;
+    font-size: 22px;
+
+    position: relative;
+}
+
+.right li:hover::after {
+    width: 100%;
+}
+
+.right li::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    position: absolute;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    left: 50%;
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/*
+.right li:hover {
+    border-bottom: 2px solid white;
+}
+*/
+
+.collaps-btn {
+    visibility: hidden;
+    float: right;
+
+    margin-right: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 858px) {
+
+    .collaps-btn {
+        visibility: visible;
+    }
+
+    .right {
+        visibility: collapse;
+    }
+}
+
+.collaps-menu {
+    display: none;
+    position: relative;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.collaps-menu li {
+    position: relative;
+    padding: 25px;
+    font-size: 36px;
+}
+
+/*
+.collaps-menu li:hover,
+.collaps-menu a:hover{
+    text-decoration: underline;
+    transform: scale(1.1);
+    background: rgb(31, 31, 31);
+}
+*/
+
+
+.collaps-menu li:hover::after,
+.collaps-menu a:hover::after {
+    width: 30%;
+}
+
+.collaps-menu li::after,
+.collaps-menu a::after {
+    content: "";
+    width: 0px;
+    height: 5px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 0.25s ease;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.collaps div {
+    color: #fff;
+    background-color: #fff;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    z-index: -1;
+}
+
+#collaps-close {
+    font-size: 56px;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    right: -40%;
+    padding: 50px;
+}
+
+.left-page {
+    position: relative;
+    float: left;
+    width: 45%;
+    height: 100%;
+
+}
+
+.right-page {
+    position: relative;
+    float: right;
+    width: 54.5%;
+    height: 100%;
+}
+
+#main-page {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 858px) {
+
+    .left-page {
+        width: 100%;
+        margin-bottom: 10px;
+        top: -40%;
+        z-index: -1;
+    }
+
+    .right-page {
+        width: 100%;
+        top: -40%;
+    }
+}
+
+.para {
+    color: #fff;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 450px;
+}
+
+.para h1 {
+    font-size: 64px;
+}
+
+.para p {
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 60px;
+}
+
+.para span {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.para span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 17%;
+    width: 0;
+    height: 3px;
+    background: #fff;
+    transform: translate(-50%);
+    transition: all 0.25s ease;
+}
+
+.para span:hover::after {
+    width: 35%;
+}
+
+.photo1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+    width: 700px;
+    height: 500px;
+    z-index: -1;
+}
+
+.profile {
+    position: relative;
+    top: 73%;
+    left: 37%;
+    width: 400px;
+    height: 150px;
+    background-color: rgb(24, 23, 25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.profile-pic {
+    position: relative;
+    top: 10%;
+    left: 5%;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+}
+
+.profile-name {
+    position: relative;
+    top: -10%;
+    margin-left: 40px;
+    display: inline;
+    color: #fff;
+    font-size: 18px;
+}
+
+.profile-role {
+    position: relative;
+    top: -15%;
+    left: 14%;
+    margin-left: 40px;
+    color: #828282;
+    font-size: 14px;
+}
+
+.profile-date {
+    position: relative;
+    color: #fff;
+    top: -20%;
+    left: 5%;
+    width: 250px;
+    font-size: 26px;
+}
+
+@media only screen and (max-width: 858px) {
+
+    .photo1 {
+        left: 9%;
+        width: 500px;
+        height: 300px;
+    }
+
+    .profile * {
+        transform: scale(0.7);
+    }
+
+    .profile {
+        width: 350px;
+        height: 50;
+        top: 50%;
+        left: 30%;
+    }
+
+    .profile-date {
+        left: -5%;
+    }
+
+    .profile-role {
+        left: -4%;
+    }
+
+    .profile-name {
+        left: -5%;
+    }
+}
